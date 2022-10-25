@@ -3,4 +3,5 @@
 use Illuminate\Support\Facades\Route;
 use SSD\CookiesDialog\Controllers\CookieController;
 
-Route::post('/cookie', CookieController::class);
+Route::post('/cookie', CookieController::class)
+    ->name('ssd.cookie');

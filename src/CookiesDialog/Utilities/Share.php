@@ -2,7 +2,7 @@
 
 namespace SSD\CookiesDialog\Utilities;
 
-use Illuminate\Config\Repository;
+use Illuminate\Contracts\Config\Repository;
 use Illuminate\Http\Request;
 
 class Share
@@ -13,7 +13,7 @@ class Share
      * Shares constructor.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Illuminate\Config\Repository  $config
+     * @param  \Illuminate\Contracts\Config\Repository  $config
      */
     public function __construct(private readonly Request $request, private readonly Repository $config)
     {
