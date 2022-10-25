@@ -20,7 +20,7 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->publishes([
             __DIR__.'/config/cookies-dialog.php' => config_path('cookies-dialog.php'),
-        ], 'config');
+        ], 'laravel-cookies-dialog');
 
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     }
