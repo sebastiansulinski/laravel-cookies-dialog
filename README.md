@@ -76,7 +76,7 @@ export const useCookieStore = defineStore('cookies', {
       this.thirdParty = !this.thirdParty;
     },
     agree() {
-      axios.post('/cookie', { third_party: Number(this.thirdParty) })
+      axios.post('/ssd/cookie', { third_party: Number(this.thirdParty) })
         .then(() => window.location.reload())
         .catch(error => console.log(error));
     },

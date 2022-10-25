@@ -52,10 +52,8 @@ class CookiesDialogTest extends TestCase
     {
         $this->postJson(route('ssd.cookie'), ['third_party' => 0])
             ->assertStatus(200)
-            ->assertJson([
-                'success' => true,
-            ])
-            ->assertCookie('third_party_cookies', 0, false);
+            ->assertJson(['success' => true])
+            ->assertCookie('third_party_cookies', 0);
     }
 
     /**
