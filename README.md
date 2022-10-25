@@ -3,7 +3,7 @@
 This package adds simple functionality to manage cookie dialog on your website.
 It consists of the Controller, which expects request to indicate if third party cookies are being allowed or not and sets the cookie on user's machine accordingly.
 
-You can either use your own front end or use the one that comes with the package (vuejs/inertiajs/tailwindcss).
+You can either use your own front end implementation or use the examples towards the bottom of this page (vuejs/inertiajs/pinia/tailwindcss).
 
 ## Installation
 
@@ -13,7 +13,9 @@ composer require sebastiansulinski/laravel-cookies-dialog
 php artisan vendor:publish --tag=laravel-cookies-dialog
 ```
 
-## Pass shared variables to inertia's view
+You will now have a `config/cookies-dialog.php` file available - feel free to update it to your heart's desire.
+
+## Pass shared variables to inertia's components
 
 ```bash
 // App\Http\Middleware\HandleInertiaRequests.php
@@ -29,7 +31,7 @@ public function share(Request $request): array
 }
 ```
 
-Included `ServiceProvider` automatically makes all these variables available to all views.
+Included `ServiceProvider` (which is loaded using package discovery) automatically makes all these variables available to all views.
 
 ## Adding variables to share
 
@@ -198,3 +200,5 @@ const revealed = ref(false);
 </div>
 </template>
 ```
+
+Lastly add the component to the footer of your template, and you're done.
