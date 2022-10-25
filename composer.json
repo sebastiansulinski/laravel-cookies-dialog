@@ -1,0 +1,43 @@
+{
+    "name": "sebastiansulinski/laravel-cookies-dialog",
+    "description": "Laravel Cookies Dialog",
+    "homepage": "https://github.com/sebastiansulinski/laravel-cookies-dialog",
+    "keywords": ["laravel", "cookies", "cookies-dialog"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Sulinski",
+            "email": "seb@sulinski.me",
+            "homepage": "https://github.com/sebastiansulinski"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "laravel/framework": "^9.36"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.11"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "SSD\\CookiesDialog\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SSDTest\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SSD\\CookiesDialog\\ServiceProvider"
+            ]
+        }
+    }
+}
