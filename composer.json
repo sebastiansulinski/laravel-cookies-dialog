@@ -39,5 +39,6 @@
                 "SSD\\CookiesDialog\\ServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
